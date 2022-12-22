@@ -13,14 +13,14 @@ import {
 
 const RoomFilter = props => (
   <Filter {...props}>
-    <TextInput label="Search SID" source="hub_sid" alwaysOn />
+    <TextInput label="Search Name" source="name" alwaysOn />
   </Filter>
 );
 
 export const RoomList = props => (
   <List {...props}>
     <Datagrid>
-      <TextField label="Hub SID" source="hub_sid" />
+      <TextField source="name" />
       <DateField label="Created At" source="inserted_at" />
     </Datagrid>
   </List>
