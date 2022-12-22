@@ -37,6 +37,8 @@ import { createMuiTheme, withStyles } from "@material-ui/core/styles";
 import { UnauthorizedPage } from "./react-components/unauthorized";
 import { store } from "hubs/src/utils/store-instance";
 
+import { RoomList } from "./react-components/grid-custom/rooms";
+
 const qs = new URLSearchParams(location.hash.split("?")[1]);
 
 window.APP = { store };
@@ -153,6 +155,8 @@ class AdminUI extends Component {
               <Resource name="owned_files" />
 
               <Resource name="projects" list={ProjectList} show={ProjectShow} />
+
+              <Resource name="hubs" list={RoomList} options={{ label: "Rooms" }} />
             </Admin>
             {this.state.showAutoEndSessionDialog && (
               <AutoEndSessionDialog
