@@ -37,7 +37,6 @@ import { createMuiTheme, withStyles } from "@material-ui/core/styles";
 import { UnauthorizedPage } from "./react-components/unauthorized";
 import { store } from "hubs/src/utils/store-instance";
 
-import { RoomList } from "./react-components/grid-custom/rooms";
 import { GRIDResources } from "./react-components/grid-custom/grid-resources";
 
 const qs = new URLSearchParams(location.hash.split("?")[1]);
@@ -156,7 +155,6 @@ class AdminUI extends Component {
               <Resource name="owned_files" />
 
               <Resource name="projects" list={ProjectList} show={ProjectShow} />
-
               {GRIDResources()}
             </Admin>
             {this.state.showAutoEndSessionDialog && (
