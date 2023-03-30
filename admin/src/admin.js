@@ -157,7 +157,7 @@ class AdminUI extends Component {
 
               <Resource name="projects" list={ProjectList} show={ProjectShow} />
 
-              {GRIDResources}
+              {GRIDResources()}
             </Admin>
             {this.state.showAutoEndSessionDialog && (
               <AutoEndSessionDialog
